@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<form id="loginForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="button" onclick="checkLogin()">Login</button>
+</form>
+
+<div id="fileContainer" style="display: none; margin-top: 20px;">
+<h1> EM ledu bro ikada</h1>
+    <img src="tenor.gif">
+</div>
+
+<script>
+    function checkLogin() {
+        var enteredUsername = document.getElementById('username').value;
+        var enteredPassword = document.getElementById('password').value;
+
+        // Replace 'yourUsername' and 'yourPassword' with your specified username and password
+        var correctUsername = '12345';
+        var correctPassword = 'abcd';
+
+        if (enteredUsername === correctUsername && enteredPassword === correctPassword) {
+            // Show the file container if login is successful
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('fileContainer').style.display = 'block';
+        } else {
+            alert('Invalid username or password. Please try again.');
+        }
+    }
+</script>
+
+</body>
+</html>
